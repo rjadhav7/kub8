@@ -1,0 +1,5 @@
+Set postgresql.pgHbaTrustAll to true. (I think this should be moved under pgHbaConfiguration in documentation)
+helm install postgres --set postgresql.pgHbaTrustAll=true\
+>  --set postgresql.livenessProbe.initialDelaySeconds=600\
+>  --set postgresql.readinessProbe.initialDelaySeconds=600\
+>  bitnami/postgresql-ha
